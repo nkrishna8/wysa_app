@@ -1,2 +1,2 @@
 # wysa_app
-Wysa Assignment
+Wysa App
