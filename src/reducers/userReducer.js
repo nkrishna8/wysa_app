@@ -4,8 +4,8 @@ const initialState = {
     password: "",
     adminUserId: "admin",
     adminPassword: "admin",
-    backgroundColor: "",
-    appThemeFlag: false
+    backgroundColor: "linear-gradient(239.26deg, #DDEEED 63.17%, #FDF1E0 94.92%)",
+    // appThemeFlag: false
 
 }
 
@@ -34,10 +34,10 @@ export const bgColorChangeActionCreator = (payload) => {
     return ({ type: ACTIONS.BGCOLOR, payload: payload })
 }
 
-export const themeFlagChangeActionCreator = (payload) => {
-    console.log("themeFlagChangeActionCreator++++++++", payload);
-    return ({ type: ACTIONS.THEMEFLAG, payload: payload })
-}
+// export const themeFlagChangeActionCreator = (payload) => {
+//     console.log("themeFlagChangeActionCreator++++++++", payload);
+//     return ({ type: ACTIONS.THEMEFLAG, payload: payload })
+// }
 
 export const userReducer = (state = initialState, action) => {
     const { type, payload } = action;
@@ -53,8 +53,8 @@ export const userReducer = (state = initialState, action) => {
         case ACTIONS.BGCOLOR:
             return { ...state, backgroundColor: payload }
 
-        case ACTIONS.THEMEFLAG:
-            return { ...state, appThemeFlag: payload }
+        // case ACTIONS.THEMEFLAG:
+        //     return { ...state, appThemeFlag: payload }
 
         default:
             return state;
